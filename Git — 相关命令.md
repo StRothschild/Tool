@@ -47,7 +47,7 @@ ssh-keygen -t rsa -b 4096 -C "email@example.com"
 则应该配置 ssh-agent 来管理本地的私钥。有3个步骤如下： */
 
 /* 1. start the ssh-agent */
-eval $(ssh-agent -s) 
+eval $(ssh-agent -s)
 
 /* 2. Add your SSH private key to the ssh-agent. 私钥地址名称都是默认的，可按需更改 */
 ssh-add ~/.ssh/id_rsa
@@ -86,7 +86,7 @@ git config --global push.default simple
 ### 1. Help
 #### 1. 打开命令的说明文档
 ```
-$ git help <命令名> 
+$ git help <命令名>
 ```
 
 
@@ -105,9 +105,10 @@ $ git init
 ### 3. Clone
 #### 1. 克隆整个远程仓库
 ```
+/* clone 出来的远程仓库和本地仓库会自动关联 */
 $ git clone <远程仓库地址> <可以指定本地仓库名>
 ```
-#### 支持多种类型的远程仓库地址协议，例如： 
+#### 支持多种类型的远程仓库地址协议，例如：
 ```
 $ git clone http[s]://userName:password@XXXXXX.git
 $ git clone ssh://userName@XXXXXX.git myRepositoryName
@@ -149,7 +150,7 @@ $ git remote rename <原远程仓库名> <新远程仓库名>
 #### 查看当前有哪些改动，并且这些改动的状态是被暂存（add）
 
 ```
-$ git status      // 显示有哪些改动，有没有被add 
+$ git status      // 显示有哪些改动，有没有被add
 ```
 
 
@@ -164,10 +165,10 @@ $ git add <file>
 
 /* 监控工作区的状态树，并把工作区的所有变化提交到暂存区（stage），
 包括文件内容修改（modified）以及新文件（new），但不包括被删除的文件 */
-$ git add . 
+$ git add .
 
 /* 不会提交新文件（untracked file），但会更新已有文件的修改和文件的删除 */
-git add -u 
+git add -u
 
 /* 不但提交新文件（untracked file），并会更新已有文件的修改和文件的删除 */
 $ git add -A
@@ -207,7 +208,7 @@ $ git reset HEAD <file>
 #### 3. 将已经commit到版本库的改动撤销（版本回退）
 ```
 /* 查看版本库,获取 commitId（版本号） */
-$ git log 
+$ git log
 
 /* 通过 commitId，强制选择版本库中的版本 */
 $ git reset --hard commitId
@@ -334,7 +335,7 @@ $ git push --set-upstream <远程仓库名> <本地分支名>
 
 
 
-#### 3. 新建分支 
+#### 3. 新建分支
 #### 如果==省略远程分支名==，则表示将本地分支推送到与之存在”追踪关系”的远程分支(通常两者同名)，如果该远程分支不存在，则会被==新建==
 ```
 $ git push origin test  =  $ git push origin test:test
@@ -404,7 +405,7 @@ git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 5
 git log --pretty='%aN' | sort -u | wc -l
 
 /* 提交数统计 */
-git log --oneline | wc -l 
+git log --oneline | wc -l
 
 /* 添加或修改的代码行数 */
 git log --stat|perl -ne 'END { print $c } $c += $1 if /(\d+) insertions/
