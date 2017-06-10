@@ -165,7 +165,7 @@ $ git add <file>
 
 /* 监控工作区的状态树，并把工作区的所有变化提交到暂存区（stage），
 包括文件内容修改（modified）以及新文件（new），但不包括被删除的文件 */
-$ git add .
+$ git add .     // . 代表当前目录及其子孙目录
 
 /* 不会提交新文件（untracked file），但会更新已有文件的修改和文件的删除 */
 git add -u
@@ -175,6 +175,7 @@ $ git add -A
 ```
 ![三种add指令的区别](http://image.codeweblog.com/upload/4/c5/4c5c187f4b7b6af1_thumb.jpg)
 
+#### 注意：Git 2.0 以后，需要显示指定目录不然就是整个目录树。并且git add .和git add -A .没有区别。
 
 
 
