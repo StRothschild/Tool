@@ -140,7 +140,7 @@ $ git remote rename <原远程仓库名> <新远程仓库名>
 - #### 工作区是除 .git 外的文件
 - #### 版本库是指 .git 文件
 - #### stage 是暂存区
-![本地 Git 仓库](http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0)
+![本地 Git 仓库](https://github.com/StRothschild/Tools/blob/master/Git%20%E2%80%94%20%E6%A6%82%E5%BF%B5.jpg?raw=true)
 
 
 
@@ -197,13 +197,17 @@ $ git commit -m "commit info"    // 提交同时添加提交信息
 #### 1. 将当前工作区的改动撤销
 ```
 /* 撤销工作区（尚未 add）的改动*/
-$ git checkout --<file>
+$ git checkout -- <file>
+例如：
+$ git checkout -- 'test.md'
 ```
 
 #### 2. 将已经add到暂存区的改动撤销（unstage）
 ```
 /* 撤销已添加到暂存区的改动，改动会返回工作区 */
 $ git reset HEAD <file>
+例如：
+$ git reset HEAD 'test.md'
 ```
 
 #### 3. 将已经commit到版本库的改动撤销（版本回退）
