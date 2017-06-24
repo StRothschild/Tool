@@ -197,7 +197,7 @@ $ git commit -m "commit info"    // 提交同时添加提交信息
 #### 1. 将当前工作区的改动撤销
 ```
 /* 撤销工作区（尚未 add）的改动*/
-$ git checkout --<file>    
+$ git checkout --<file>
 ```
 
 #### 2. 将已经add到暂存区的改动撤销（unstage）
@@ -213,6 +213,16 @@ $ git log
 
 /* 通过 commitId，强制选择版本库中的版本 */
 $ git reset --hard commitId
+
+/* 返回之前版本 */
+$ git reset HEAD^     // 回退版本,一个^表示一个版本
+$ git reset HEAD~1    // HEAD~n,表示回退到之前n个版本
+$ git reset HEAD~3
+
+/* reset 的三种参数 */
+--hard 版本库、暂存区（storage）和工作区全部被指定的提交版本所替换
+--mixed 或者不使用参数，版本库和暂存区（storage）会被替换，而工作区不会被替换，老版本和新版本之间的差异会被当成 local change 保存在工作区中
+--soft 版本库被替换，而暂存区（storage）和工作区不会被替换，老版本和新版本之间的差异会被保存在暂存区（storage）中
 ```
 
 
