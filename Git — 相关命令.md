@@ -35,7 +35,7 @@ push 时需要输入用户名和密码 | 除非给 SSH 配置了密码，否则 
 /* 检测本地是否有 public SSH key 存在 */
 ls -al ~/.ssh t
 
-/* 生成 SSH key pair, 其中参数 [-t rsa] 代表加密类型，[-b bit]代表秘钥长度，[-C comment]代表注释帮助你记忆这对秘钥的用途 */
+/* 通过 ssh-keygen 生成 rsa key pair, 其中参数 [-t rsa] 代表加密类型，[-b bit]代表秘钥长度，[-C comment]代表注释帮助你记忆这对秘钥的用途 */
 ssh-keygen -t rsa -b 4096 -C "comment"
 
 /* 生成 SSH key pair 后会要求设置密码，这个密码也可以置空。
@@ -45,7 +45,6 @@ ssh-keygen -t rsa -b 4096 -C "comment"
 
 /* 以上步骤已经可以使用 SSH 的方式来连接远程库了，如果不、想每次连接都输入一遍密码
 则应该配置 ssh-agent 来管理本地的私钥。有3个步骤如下： */
-
 /* 1. start the ssh-agent */
 eval $(ssh-agent -s)
 
@@ -56,8 +55,11 @@ ssh-add ~/.ssh/id_rsa
 https://help.github.com/articles/working-with-ssh-key-passphrases/
 
 
-/* 以上方式产生和配置本地私钥太复杂，使用 PuTTYgen 可以更方便实现上述功能 */
 
+
+
+/* 以上方式产生的 rsa 秘钥不适用于 tortoise，为了兼容 tortoise，可以使用 PuTTYgen 来生成密钥对，并用 pageant 来管理本地私钥 */
+http://blog.csdn.net/qq_15974389/article/details/50937862
 ```
 
 
