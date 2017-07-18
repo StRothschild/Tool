@@ -8,7 +8,7 @@
 ---
 ### 2. 配置项目的 username 用户名和 email 邮箱
 ```
-/* 如果使用 --glabol 参数配置，则在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息 */
+/* 如果使用 --global 参数配置，则在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息 */
 $ git config --global user.name "yourname"
 $ git config --global user.email "your@email.com"
 
