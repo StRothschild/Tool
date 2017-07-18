@@ -35,8 +35,8 @@ push 时需要输入用户名和密码 | 除非给 SSH 配置了密码，否则 
 /* 检测本地是否有 public SSH key 存在 */
 ls -al ~/.ssh t
 
-/* 生成 SSH key pair, 其中参数 [-t rsa] 代表加密类型， [-b bit] 代表秘钥长度 [-c text] 代表注释帮助你记忆这对秘钥的用途 */
-ssh-keygen -t rsa -b 4096 -c "email@example.com"
+/* 生成 SSH key pair, 其中参数 [-t rsa] 代表加密类型，[-b bit]代表秘钥长度，[-C comment]代表注释帮助你记忆这对秘钥的用途 */
+ssh-keygen -t rsa -b 4096 -C "comment"
 
 /* 生成 SSH key pair 后会要求设置密码，这个密码也可以置空。
 如果设置了密码，则每次使用 SSH 密钥来连接远程仓库时都需要输入该密码 */
