@@ -6,12 +6,18 @@
 
 
 ---
-### 2. 配置本机的 username 用户名和 email 邮箱
-#### 在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息。
-
+### 2. 配置项目的 username 用户名和 email 邮箱
 ```
-git config --global user.name "yourname"
-git config --global user.email "your@email.com"
+/* 如果使用 --glabol 参数配置，则在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息 */
+$ git config --global user.name "yourname"
+$ git config --global user.email "your@email.com"
+
+/* 如果只希望为本项目添加用户信息，则去掉 --glabol 参数 */
+$ git config user.name "yourname"
+$ git config user.email "your@email.com"
+
+/* 查看本项目的所有配置信息 */
+$ git config --list
 ```
 
 
@@ -76,7 +82,7 @@ http://blog.csdn.net/qq_15974389/article/details/50937862
 
 ```
 /* 一般设置成更加保守的策略 simple */
-git config --global push.default simple
+$ git config --global push.default simple
 ```
 
 
