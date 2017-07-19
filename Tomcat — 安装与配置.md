@@ -1,8 +1,8 @@
 ## Tomcat 安装与配置
 - #### Tomcat 下载
-##### 在官网 http://tomcat.apache.org/ 可以选择各种版本的 Tomcat 下载。在选好版本后，一般在选择 Core 类型的安装包。
+  ##### 在官网 http://tomcat.apache.org/ 可以选择各种版本的 Tomcat 下载。在选好版本后，一般在选择 Core 类型的安装包。
 
-  ![Tomcat下载](https://github.com/StRothschild/Back-End/blob/master/resource/Java%20%E2%80%94%20JRE&JDK.jpg?raw=true)
+  ![Tomcat下载](https://github.com/StRothschild/Tools/blob/master/resource/Tomcat%20%E2%80%94%20%E4%B8%8B%E8%BD%BD.png?raw=true)
 
 - #### Tomcat 安装配置
   ##### 下载完 Tomcat 安装包后，解压至目标文件夹，则该文件夹就是 Tomcat 的安装目录。因为 Tomcat 是免安装的绿色软件。
