@@ -78,7 +78,7 @@ ssh -T git@github.com
 /* 如果出现 connect to host github.com port 22: Connection timed out 的错误 */
 在秘钥存放的 .ssh 文件下新建一个名为 config 的文件，内容如下：
 Host github.com
-User 463215040@qq.com （你注册github时的邮箱，这里使用注册的用户名也行）
+User 463215040@qq.com （注册 github 账号的邮箱，这里使用注册的用户名也行）
 Hostname ssh.github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa
