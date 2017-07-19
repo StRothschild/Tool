@@ -68,8 +68,31 @@ http://blog.csdn.net/qq_15974389/article/details/50937862
 ```
 
 
+
 ---
-### 5. SSH 配置检查及常见问题
+### 5. 查看 commit 的历史记录
+#### 查看提交记录有好几种方式，最简单的就是通过 GUI 工具，图形化的展示历次 commit 情况。首先打开 Git GUI，然后选择 Repository ——> Visualize All Branch History
+
+#### 另一种方法查看 cmmit 记录的方式就是利用 git log 命令。
+```
+/* 不加参数的 git log 会打印出当前分支所有的 commit 记录 */
+$ git log
+
+/* 添加参数 -p 会额外打印出每个 commit 相比于上一个 commit 的变动 */
+$ git log -p
+
+/* 添加参数 -n 只外打印出 n 条 commit 记录 */
+$ git log -3
+
+/* 打印最近一次的 commit 具体变动 */
+$ git log -p -1
+```
+
+
+
+
+---
+### 6. SSH 配置检查及常见问题
 ```
 /* 通过以上步骤的 SSH 配置后，就可以无密码链接远程库。要检验是否配置成功，可以使用以下语句测试 */
 ssh -T git@github.com
@@ -86,9 +109,10 @@ Port 443
 ```
 
 
+
+
 ---
-### 5.常见配置
-#### push.default matching 和 push.default simple 的区别：
+### 7. push.default matching 和 push.default simple 的区别：
 
 - #### push.default maching 的意思是：git push 会把你本地所有分支push到名称相对应的远程主机上。这意味着可能你会在不经意间push一些你原本没打算push的分支。
 
@@ -98,6 +122,17 @@ Port 443
 /* 一般设置成更加保守的策略 simple */
 $ git config --global push.default simple
 ```
+
+
+
+
+
+---
+### 8. GUI 查看中文乱码
+#### 打开 GUI，选择 Edit ——> Options ——> Default File Contents Endoding ——> change 改成 utf-8
+
+http://blog.csdn.net/h3c4lenovo/article/details/17091811
+
 
 
 
