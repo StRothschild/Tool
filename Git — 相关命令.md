@@ -63,13 +63,27 @@ https://help.github.com/articles/working-with-ssh-key-passphrases/
 
 
 
-
-/* 以上方式产生的 rsa 秘钥不适用于 tortoise，为了兼容 tortoise，可以使用 PuTTYgen 来生成密钥对，并用 pageant 来管理本地私钥 */
+/* 以上方式产生的 rsa 秘钥不适用于 tortoise，如果要兼容 tortoise，可以使用 PuTTYgen 来生成密钥对，并用 pageant 来管理本地私钥 */
 http://blog.csdn.net/qq_15974389/article/details/50937862
 ```
 
 
+---
+### 5. SSH 配置检查及常见问题
+```
+/* 通过以上步骤的 SSH 配置后，就可以无密码链接远程库。要检验是否配置成功，可以使用以下语句测试 */
+ssh -T git@github.com
 
+
+/* 如果出现 connect to host github.com port 22: Connection timed out 的错误 */
+在秘钥存放的 .ssh 文件下新建一个名为 config 的文件，内容如下：
+Host github.com
+User 463215040@qq.com （你注册github时的邮箱，这里使用注册的用户名也行）
+Hostname ssh.github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
+```
 
 
 ---
