@@ -7,6 +7,7 @@
 
 ---
 ### 2. 配置项目的 username 用户名和 email 邮箱
+#### 需要注意的是 username 和 email 的配置需要和 github 上的账户名和邮箱地址相同才能被统计进贡献次数。 
 ```
 /* 如果使用 --global 参数配置，则在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息 */
 $ git config --global user.name "yourname"
