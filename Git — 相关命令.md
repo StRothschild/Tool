@@ -18,6 +18,9 @@ $ git config user.email "your@email.com"
 
 /* 查看本项目的所有配置信息 */
 $ git config --list
+
+/* 打开修改本项目的全局配置信息 */
+$ git config --global -e
 ```
 
 
