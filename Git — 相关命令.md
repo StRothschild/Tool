@@ -48,7 +48,7 @@ ls -al ~/.ssh t
 /* 通过 ssh-keygen 生成 rsa key pair, 其中参数 [-t rsa] 代表加密类型，[-b bit]代表秘钥长度，[-C comment]代表注释帮助你记忆这对秘钥的用途 */
 ssh-keygen -t rsa -b 4096 -C "comment"
 
-/* 生成 SSH key pair 后会要求设置密码，这个密码也可以置空。
+/* 生成 SSH key pair 后会要求设置密码，这个密码也可以置空，如果置空，可以用回车直接登录。
 如果设置了密码，则每次使用 SSH 密钥来连接远程仓库时都需要输入该密码 */
 
 /* 生成 SSH key pair 后，将公钥 public key 拷入 gitHub 的 accunt 中 */
@@ -208,11 +208,32 @@ $ git remote rename <原远程仓库名> <新远程仓库名>
 
 ---
 ### 6. Status
-#### 查看当前有哪些改动，并且这些改动的状态是被暂存（add）
+#### 查看当前有哪些改动，以及这些改动的状态
 
 ```
-$ git status      // 显示有哪些改动，有没有被add
+$ git status      // 显示有哪些改动，有没有被add，红色没表示没有被暂存，绿色表示已被暂存
 ```
+
+
+
+
+
+---
+### 7. diff
+#### 查看改动的具体内容
+```
+/* 显示还在工作区的改动（no-staged）*/
+$ git diff     
+
+/* 显示已经被暂存的改动（storaged）*/
+$ git diff --stage
+
+/* 显示具体的改动，这些改动没有被暂存（no-storaged）*/
+$ git diff HEAD
+```
+
+
+
 
 
 
