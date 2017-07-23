@@ -201,7 +201,8 @@ $ git remote rename <原远程仓库名> <新远程仓库名>
 - #### 工作区是除 .git 外的文件
 - #### 版本库是指 .git 文件
 - #### stage 是暂存区
-![本地 Git 仓库](https://github.com/StRothschild/Tools/blob/master/Git%20%E2%80%94%20%E6%A6%82%E5%BF%B5.jpg?raw=true)
+
+  ![本地 Git 仓库](https://github.com/StRothschild/Tools/blob/master/Git%20%E2%80%94%20%E6%A6%82%E5%BF%B5.jpg?raw=true)
 
 
 
@@ -222,7 +223,7 @@ $ git status      // 显示有哪些改动，有没有被add，红色没表示�
 #### 查看改动的具体内容
 ```
 /* 显示还在工作区的改动（working directory）与暂存区的区别（stage）*/
-$ git diff     
+$ git diff
 
 /* 显示已经被暂存的改动（stage）与版本库的区别（repository）*/
 $ git diff --cached/--staged
