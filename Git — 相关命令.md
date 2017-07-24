@@ -74,7 +74,7 @@ http://blog.csdn.net/qq_15974389/article/details/50937862
 
 
 ---
-### 5. 查看 commit 的历史记录
+### 5. 用 log 查看 commit 的历史记录（版本树内各个版本的差异）
 #### 查看提交记录有好几种方式，最简单的就是通过 GUI 工具，图形化的展示历次 commit 情况。首先打开 Git GUI，然后选择 Repository ——> Visualize All Branch History
 
 #### 另一种方法查看 cmmit 记录的方式就是利用 git log 命令。
@@ -82,7 +82,7 @@ http://blog.csdn.net/qq_15974389/article/details/50937862
 /* 不加参数的 git log 会打印出当前分支所有的 commit 记录 */
 $ git log
 
-/* 添加参数 -p 会额外打印出每个 commit 相比于上一个 commit 的变动 */
+/* 添加参数 -p 会以补丁模式（patch）额外打印出每个 commit 相比于上一个 commit 的变动 */
 $ git log -p
 
 /* 添加参数 -n 只外打印出 n 条 commit 记录 */
@@ -218,7 +218,7 @@ $ git status      // 显示有哪些改动，有没有被add，红色没表示�
 
 
 ---
-### 7. diff
+### 7. diff（本地修改与当前版本库的差异）
 #### 查看改动的具体内容
 ```
 /* 显示还在工作区的改动（working directory）与暂存区的区别（stage）*/
