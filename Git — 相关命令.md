@@ -9,15 +9,15 @@
 ### 2. 配置项目的 user.name 用户名和 user.email 邮箱
 #### 需要注意的是 user.name 和 user.email 的必须要和 github 注册的账户名和邮箱地址完全相同，才能被统计进贡献次数。 所以在适配多个 Git 系统时，要注意全局的 user.name 和 user.email 的比项目的 config 配置优先级要低，所以要报清楚具体设置的生效值，以避免提交没有被统计的情况出现。
 ```
-/* 如果使用 --global 参数配置，则在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息 */
+/* 如果使用 --system（系统） 或 --global（全局） 参数配置，则在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息 */
 $ git config --global user.name "yourname"
 $ git config --global user.email "your@email.com"
 
-/* 如果只希望为本项目添加用户信息，则去掉 --glabol 参数 */
+/* 如果只希望为本项目添加用户信息，则使用 --local（本地仓库） 参数，或者不加参数 */
 $ git config user.name "yourname"
 $ git config user.email "your@email.com"
 
-/* 查看本项目的所有配置信息，包括全局的、项目级的都会显示 */
+/* 查看最终三个配置文件计算后的配置信息 */
 $ git config --list
 
 /* 打开修改本项目的全局配置信息 */
