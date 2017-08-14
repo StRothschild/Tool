@@ -22,6 +22,7 @@
 
 
 
+
 ---
 - #### vim 搜索
 ```
@@ -34,6 +35,8 @@
   :set hls        //  打开高亮
   :set nohls      //  关闭高亮
 ```
+
+
 
 
 ---
@@ -54,10 +57,14 @@
 ```
 
 
+
+
 ---
 - #### 查找文件
 ```
-　find / -name  fileName     // -name 表示要求按照文件名查找
+　find / -name fileName          // -name 表示按照文件名查找
+  find . -name name* -ls         // 查找当前目录下所有名字以 name 开头的文件，并显示其详细信息
+  find /home -type d -delete     // -type 表示按照类型查找， d 表示目录， f 表示普通文件
 ```
 
 
