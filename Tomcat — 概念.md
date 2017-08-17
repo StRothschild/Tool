@@ -6,3 +6,17 @@
   ##### 1. war 模式这种可以称之为是发布模式，就这是先打成 war 包，然后放到 Tomcat 中发布；
 
   ##### 2. war exploded （破裂）模式是直接把文件、jsp页面、class 等内容拷贝到 Tomcat 部署文件夹里面，进行加载部署。这种方式支持热部署，一般在开发的时候也是用这种方式。
+
+
+
+
+
+
+---
+- #### 三种 Connector
+
+  ##### HTTP Connector
+  ##### HTTPS Connector
+  ##### AJP Connector
+
+  http://blog.csdn.net/u010297957/article/details/50782212
