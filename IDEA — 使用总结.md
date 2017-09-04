@@ -37,5 +37,18 @@
 
 
 
+
+---
+- #### 控制台 log 输出长度控制
+  ##### IDEA 控制台可以保留的输出大小默认为 1024 KB，如果要取消这个大小（长度）限制，可以更改 IDEA 的配置文件。
+
+  ##### IDEA 的配置文件 idea.properties 在安装目录下的 bin 目录中，修改文件中 idea.cycle.buffer.size 的值为 disabled，保存重启 IDES 即可。
+
+
+
+
+
+
+
 ---
 - #### Git
