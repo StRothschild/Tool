@@ -52,6 +52,14 @@
 
 
 
+---
+- #### Ctrl + Shift + N 查找文件失效
+  ##### 通过 Ctrl + Shift + N 来查找文件失效（文字显示红色），是由于非正常关闭造成的索引失效。可以通过 File ——> Invalidate Caches/Restart 来清理缓存并重启来解决这个问题。
+
+
+
+
+
 
 ---
 - #### Git
