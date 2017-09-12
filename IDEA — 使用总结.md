@@ -18,8 +18,9 @@
 
 ---
 - #### 快捷键
-  ##### Ctrl + Z                    撤销上一步
-  ##### Ctrl + Y                    撤销上一步的操作（可以撤销 Ctrl + Z）
+  ##### Ctrl + Z                    撤销上一步
+  ##### Ctrl + shift + Z            撤销上一步的操作（可以撤销 Ctrl + Z）
+  ##### Ctrl + Y                    在 IDEA 中是删除当前行， 在 Eclipse 中相当于 IDEA 中的 Ctrl + shift + Z  
 
   ##### Ctrl + E：                  弹出最近编辑的文件列表
   ##### Ctrl + R：                  替换文本
