@@ -1,7 +1,7 @@
 # Git 配置
 
 ### 1. Terminal 选择
-#### 在安装 Git 时需要选择命令行终端。Git 自带了的 MinTTY 和 系统默认终端两种选择。一般选择 MinTTY，一种 Cygwin（模拟Linux接口） 和 MSYS 环境下的虚拟终端。
+#### 在安装 Git 时需要选择命令行终端。Git 自带了的 MinTTY 和 系统默认终端两种选择。一般选择 MinTTY ———— 一种 Cygwin（模拟Linux接口） 和 MSYS 环境下的虚拟终端。
 
 
 
