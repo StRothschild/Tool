@@ -256,7 +256,7 @@ $ git add -A
 ```
 ![三种add指令的区别](http://image.codeweblog.com/upload/4/c5/4c5c187f4b7b6af1_thumb.jpg)
 
-#### 注意：Git 2.0 以后，需要显示指定目录不然就是整个目录树。并且git add .和git add -A .没有区别。
+#### 注意：Git 2.0 以后，需要显示指定目录不然就是整个目录树。并且 git add . 和 git add -A 没有区别。
 
 
 
