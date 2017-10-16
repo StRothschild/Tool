@@ -59,7 +59,7 @@
 
 ---
 - #### 设置 indent（缩进）
-  ##### IDEA 的缩进是根据文件类型来设置的，不同的文件类型可以设置不同的缩进方案。一般是 2 space 或者是 4 space
+  ##### IDEA 的缩进是根据文件类型来设置的，不同的文件类型可以设置不同的缩进方案，一般是 2 space 或者是 4 space。
   ##### File ——> settings  ——> Settings  ——> Editor ——> Code Style
 
 
