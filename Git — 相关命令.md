@@ -504,10 +504,10 @@ git log --author="$(git config --get user.name)" --pretty=tformat: --numstat | g
 /* 仓库提交者排名前 5（如果看全部，去掉 head 管道即可）*/
 git log --pretty='%aN' | sort | uniq -c | sort -k1 -n -r | head -n 5
 
-/* 贡献者统计 */
+/* 总共的贡献者人数统计 */
 git log --pretty='%aN' | sort -u | wc -l
 
-/* 提交数统计 */
+/* 总共的提交次数统计 */
 git log --oneline | wc -l
 
 /* 添加或修改的代码行数 */
