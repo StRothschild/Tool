@@ -40,7 +40,7 @@
 ---
 - #### 端口冲突
   ##### 通过命令  netstat -o  查询当前端口的占用情况和PID
-  ##### 通过命令  taskkill /PID XXX 来结束 PID 为 XXX 的进程
+  ##### 通过命令  taskkill /PID XXX 来结束 PID 为 XXX 的进程（taskkill /F /PID XXX 表示强制终止）
 
 
 
