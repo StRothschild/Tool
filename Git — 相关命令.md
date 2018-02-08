@@ -1,7 +1,7 @@
 # Git 配置
 
 ### 1. Terminal 选择
-#### 在安装 Git 时需要选择命令行终端。Git 自带了的 MinTTY 和 系统默认终端两种选择。一般选择 MinTTY ———— 一种 Cygwin（模拟Linux接口） 和 MSYS 环境下的虚拟终端。
+#### 在安装 Git 时需要选择命令行终端。Git 自带了的 MinTTY 和 系统默认终端两种选择。一般选择 MinTTY — 一种 Cygwin（模拟Linux接口） 和 MSYS 环境下的虚拟终端。
 
 
 
@@ -117,15 +117,14 @@ Port 443
 
 ---
 ### 7. push.default matching 和 push.default simple 的区别：
-
 - #### push.default maching 的意思是：git push 会把你本地所有分支push到名称相对应的远程主机上。这意味着可能你会在不经意间push一些你原本没打算push的分支。
 
 - #### push.default simple 的意思是：git push仅仅把当前所在分支push到从当初git pull pull下来的那个对应分支上，另外，这个过程也会同时检查各个分支的名称是否相对应。
 
-```
-/* 一般设置成更加保守的策略 simple */
-$ git config --global push.default simple
-```
+  ```
+  /* 一般设置成更加保守的策略 simple */
+  $ git config --global push.default simple
+  ```
 
 
 
