@@ -265,7 +265,7 @@ $ git add -A
 #### 1. 将暂存区（stage）的所有内容提交到分支中
 ```
 $ git commit                     // 自动打开 vim 来编辑提交信息
-$ git commit -m "commit info"    // 提交同时添加提交信息
+$ git commit -m "commit info"    // 提交同时添加提交信息  -m 表示 'message'
 ```
 
 
