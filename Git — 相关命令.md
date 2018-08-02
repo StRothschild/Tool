@@ -64,6 +64,31 @@ ssh-add ~/.ssh/id_rsa
 /* 3. 配置 ssh-agent 每次会自动运行，只需要在开启时输入一次密码即可 */
 https://help.github.com/articles/working-with-ssh-key-passphrases/
 
+/* 4. 配置多个 SSH Key */
+同一台机器经常需要适配多个 git host,比如gitHub、公司gitlab、oschina 等。此时就需要在 config 文件中配置多个SSH Key，使得不同的 host 能使用不同的SSH Key。
+config 文件:
+# 配置文件参数
+# Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件
+# HostName : 要登录主机的主机名
+# User : 登录名
+# IdentityFile : 指明上面User对应的identityFile路径
+
+
+# gitlab
+Host gitlab.com
+HostName gitlab.com
+User hzjiangsheng1@corp.netease.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+
+
+# github
+Host github.com
+Hostname ssh.github.com
+User 463215040@qq.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 443
 
 
 
