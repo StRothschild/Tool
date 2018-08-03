@@ -87,7 +87,7 @@ config 文件:
 # gitlab
 Host gitlab.com
 HostName gitlab.com
-User hzjiangsheng1@corp.netease.com
+User foo@bar.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa
 
