@@ -1,28 +1,28 @@
 # Git 配置
 
-### 1. Terminal 选择
-#### 在安装 Git 时需要选择命令行终端。Git 自带了的 MinTTY 和 系统默认终端两种选择。一般选择 MinTTY — 一种 Cygwin（模拟Linux接口） 和 MSYS 环境下的虚拟终端。
-
+### 1. Terminal
+  - 在安装 Git 时需要选择命令行终端。Git 自带了的 MinTTY 和 系统默认终端两种选择。一般选择 MinTTY —— 一种 Cygwin（模拟Linux接口） 和 MSYS 环境下的虚拟终端。
 
 
 ---
 ### 2. 配置项目的 user.name 用户名和 user.email 邮箱
-#### 需要注意的是 user.name 和 user.email 的必须要和 github 注册的账户名和邮箱地址完全相同，才能被统计进贡献次数。 所以在适配多个 Git 系统时，要注意全局的 user.name 和 user.email 的比项目的 config 配置优先级要低，所以要报清楚具体设置的生效值，以避免提交没有被统计的情况出现。
-```
-/* 如果使用 --system（系统） 或 --global（全局） 参数配置，则在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息 */
-$ git config --global user.name "yourname"
-$ git config --global user.email "your@email.com"
+  - 需要注意的是 user.name 和 user.email 的必须要和 github 账户的 username(类似于别名，而不是 name) 和邮箱地址完全相同，才能被统计进贡献次数。 所以在适配多个 Git 系统时，需要注意全局的 user.name 和 user.email 的比项目的 config 配置优先级要低。搞清楚具体设置的生效值，以避免提交没有被统计的情况出现。
 
-/* 如果只希望为本项目添加用户信息，则使用 --local（本地仓库） 参数，或者不加参数 */
-$ git config user.name "yourname"
-$ git config user.email "your@email.com"
+  ```
+  /* 如果使用 --system（系统） 或 --global（全局） 参数配置，则在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息 */
+  $ git config --global user.name "yourname"
+  $ git config --global user.email "your@email.com"
 
-/* 查看最终三个配置文件计算后的配置信息 */
-$ git config --list
+  /* 如果只希望为本项目添加用户信息，则使用 --local（本地仓库） 参数，或者不加参数 */
+  $ git config user.name "yourname"
+  $ git config user.email "your@email.com"
 
-/* 打开修改本项目的全局配置信息 */
-$ git config --global -e
-```
+  /* 查看最终三个配置文件计算后的配置信息 */
+  $ git config --list
+
+  /* 打开修改本项目的全局配置信息 */
+  $ git config --global -e
+  ```
 
 
 
@@ -48,6 +48,10 @@ ls -al ~/.ssh t
 /* 通过 ssh-keygen 生成 rsa key pair, 其中参数 [-t rsa] 代表加密类型，[-b bit]代表秘钥长度，[-C comment]代表注释帮助你记忆这对秘钥的用途 */
 ssh-keygen -t rsa -b 4096 -C "comment"
 
+Windows 下密钥的默认存储地址 "C:\Users\{userName}\.ssh"
+默认私钥文件为: id_rsa
+默认公钥文件为: id_rsa.pub
+
 /* 生成 SSH key pair 后会要求设置密码，这个密码也可以置空，如果置空，可以用回车直接登录。
 如果设置了密码，则每次使用 SSH 密钥来连接远程仓库时都需要输入该密码 */
 
@@ -68,10 +72,11 @@ https://help.github.com/articles/working-with-ssh-key-passphrases/
 同一台机器经常需要适配多个 git host,比如gitHub、公司gitlab、oschina 等。此时就需要在 config 文件中配置多个SSH Key，使得不同的 host 能使用不同的SSH Key。
 config 文件:
 # 配置文件参数
-# Host : Host可以看作是一个你要识别的模式，对识别的模式，进行配置对应的的主机名和ssh文件
-# HostName : 要登录主机的主机名
-# User : 登录名
-# IdentityFile : 指明上面User对应的identityFile路径
+# Host : 要登陆的主机地址
+# HostName : 要登陆的主机名
+# Port : 要登陆的主机端口
+# User : username/邮箱
+# IdentityFile : 对应主机的私钥文件路径
 
 
 # gitlab
@@ -85,10 +90,10 @@ IdentityFile ~/.ssh/id_rsa
 # github
 Host github.com
 Hostname ssh.github.com
-User 463215040@qq.com
+Port 443
+User StRothschild
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_rsa
-Port 443
 
 
 
@@ -128,14 +133,7 @@ ssh -T git@github.com
 
 
 /* 如果出现 connect to host github.com port 22: Connection timed out 的错误 */
-在秘钥存放的 .ssh 文件下新建一个名为 config 的文件，内容如下：
-Host github.com
-User 463215040@qq.com （注册 github 账号的邮箱，这里使用注册的用户名也行）
-Hostname ssh.github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa
-Port 443
-```
+在秘钥存放的 .ssh 文件下新建一个名为 config 的文件，内容参考上面 config 中的 github 部分。
 
 
 
