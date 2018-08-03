@@ -1,15 +1,20 @@
 # Git 配置
 
 ### 1. Terminal
-  - 在安装 Git 时需要选择命令行终端。Git 自带了的 MinTTY 和 系统默认终端两种选择。一般选择 MinTTY —— 一种 Cygwin（模拟Linux接口） 和 MSYS 环境下的虚拟终端。
+  - 在安装 Git 时需要选择命令行终端。Git 自带了的 MinTTY 和 系统默认终端两种选择。
+
+  - 一般选择 MinTTY —— 一种 Cygwin（模拟Linux接口） 和 MSYS 环境下的虚拟终端。
+
 
 
 ---
 ### 2. 配置项目的 user.name 用户名和 user.email 邮箱
-  - 需要注意的是 user.name 和 user.email 的必须要和 github 账户的 username(类似于别名，而不是 name) 和邮箱地址完全相同，才能被统计进贡献次数。 所以在适配多个 Git 系统时，需要注意全局的 user.name 和 user.email 的比项目的 config 配置优先级要低。搞清楚具体设置的生效值，以避免提交没有被统计的情况出现。
+  - 需要注意的是 user.name 和 user.email 的必须要和 github 账户的 username(类似于别名，而不是 name) 和邮箱地址完全相同，才能被统计进贡献次数。
+
+  - 所以在适配多个 Git 系统时，需要注意全局的 user.name 和 user.email 的比项目的 config 配置优先级要低。搞清楚具体设置的生效值，以避免提交没有被统计的情况出现。
 
   ```
-  /* 如果使用 --system（系统） 或 --global（全局） 参数配置，则在本机上提交 git 时都会以这个 usename 和 email 作为提交者的身份信息 */
+  /* 如果使用 --system（系统） 或 --global（全局） 参数配置，则在本机上提交 git 时都会以这个 user.name 和 email 作为提交者的身份信息 */
   $ git config --global user.name "yourname"
   $ git config --global user.email "your@email.com"
 
@@ -28,12 +33,12 @@
 
 ---
 ### 3. HTTPS & SSH
-#### Git 中链接远程库的方式有两种：HTTPS 和 SSH。
+  - Git 中链接远程库的方式有两种：HTTPS 和 SSH。
 
-HTTPS（改动时需要输入用户信息） | SSH（一劳永逸）
----|---
-随意 clone | clone 之前需要配置 SSH Key
-push 时需要输入用户名和密码 | 除非给 SSH 配置了密码，否则 push 时不需要输入
+    HTTPS（改动时需要输入用户信息） | SSH（一劳永逸）
+    ---|---
+    随意 clone | clone 之前需要配置 SSH Key
+    push 时需要输入用户名和密码 | 除非给 SSH 配置了密码，否则 push 时不需要输入
 
 
 
