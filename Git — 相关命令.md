@@ -1,6 +1,7 @@
 # Git 配置
 
 ### 1. Terminal
+
   - 在安装 Git 时需要选择命令行终端。Git 自带了的 MinTTY 和 系统默认终端两种选择。
 
   - 一般选择 MinTTY —— 一种 Cygwin（模拟Linux接口） 和 MSYS 环境下的虚拟终端。
@@ -8,8 +9,10 @@
 
 
 
+
 ---
 ### 2. 配置项目的 user.name 用户名和 user.email 邮箱
+
   - 需要注意的是 user.name 和 user.email 的必须要和 github 账户的 username(类似于别名，而不是 name) 和邮箱地址完全相同，才能被统计进贡献次数。
 
   - 所以在适配多个 Git 系统时，需要注意全局的 user.name 和 user.email 的比项目的 config 配置优先级要低。搞清楚具体设置的生效值，以避免提交没有被统计的情况出现。
@@ -42,6 +45,7 @@
 
 ---
 ### 3. HTTPS & SSH
+
   - Git 中链接远程库的方式有两种：HTTPS 和 SSH。
 
     HTTPS（改动时需要输入用户信息） | SSH（一劳永逸）
@@ -53,8 +57,11 @@
 
 
 
+
+
 ---
 ### 4. 配置 SSH
+
   - 检测本地是否有 public SSH key 存在
     ```
     ls -al ~/.ssh t
@@ -124,38 +131,49 @@
 
 
 
+
 ---
 ### 5. 用 log 查看 commit 的历史记录（版本树内各个版本的差异）
-#### 查看提交记录有好几种方式，最简单的就是通过 GUI 工具，图形化的展示历次 commit 情况。首先打开 Git GUI，然后选择 Repository ——> Visualize All Branch History
 
-#### 另一种方法查看 cmmit 记录的方式就是利用 git log 命令。
-```
-/* 不加参数的 git log 会打印出当前分支所有的 commit 记录 */
-$ git log
+  - 查看提交记录有好几种方式，最简单的就是通过 GUI 工具，图形化的展示历次 commit 情况。首先打开 Git GUI，然后选择 Repository ——> Visualize All Branch History
 
-/* 添加参数 -p 会以补丁模式（patch）额外打印出每个 commit 相比于上一个 commit 的变动 */
-$ git log -p
+  - 另一种方法查看 cmmit 记录的方式就是利用 git log 命令。不加参数的 git log 会打印出当前分支所有的 commit 记录。
+    ```
+    $ git log
+    ```
 
-/* 添加参数 -n 只外打印出 n 条 commit 记录 */
-$ git log -3
+  - 添加参数 -p 会以补丁模式（patch）额外打印出每个 commit 相比于上一个 commit 的变动
+    ```
+    $ git log -p
+    ```
 
-/* 打印最近一次的 commit 具体变动 */
-$ git log -p -1
-```
+  - 添加参数 -n 只外打印出 n 条 commit 记录
+    ```
+    $ git log -3
+    ```
+
+  - 打印最近一次的 commit 具体变动
+    ```
+    $ git log -p -1
+    ```
+
+
 
 
 
 
 ---
 ### 6. SSH 配置检查及常见问题
-```
-/* 通过以上步骤的 SSH 配置后，就可以无密码链接远程库。要检验是否配置成功，可以使用以下语句测试 */
-ssh -T git@github.com
+
+  - 通过以上步骤的 SSH 配置后，就可以无密码链接远程库。要检验是否配置成功，可以使用以下语句测试
+    ```
+    ssh -T git@github.com
+    ```
+
+  - 如果出现 connect to host github.com port 22: Connection timed out 的错误。在秘钥存放的 .ssh 文件下新建一个名为 config 的文件，内容参考上面 config 中的 github 部分。
 
 
-/* 如果出现 connect to host github.com port 22: Connection timed out 的错误 */
-在秘钥存放的 .ssh 文件下新建一个名为 config 的文件，内容参考上面 config 中的 github 部分。
-```
+
 
 
 
