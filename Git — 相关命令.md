@@ -14,21 +14,27 @@
 
   - 所以在适配多个 Git 系统时，需要注意全局的 user.name 和 user.email 的比项目的 config 配置优先级要低。搞清楚具体设置的生效值，以避免提交没有被统计的情况出现。
 
-  ```
-  /* 如果使用 --system（系统） 或 --global（全局） 参数配置，则在本机上提交 git 时都会以这个 user.name 和 email 作为提交者的身份信息 */
-  $ git config --global user.name "yourname"
-  $ git config --global user.email "your@email.com"
+  - 如果使用 --system（系统） 或 --global（全局） 参数配置，则在本机上提交 git 时都会以这个 user.name 和 email 作为提交者的身份信息。
+    ```
+    $ git config --global user.name "yourname"
+    $ git config --global user.email "your@email.com"
+    ```
 
-  /* 如果只希望为本项目添加用户信息，则使用 --local（本地仓库） 参数，或者不加参数 */
-  $ git config user.name "yourname"
-  $ git config user.email "your@email.com"
+  - 如果只希望为本项目添加用户信息，则使用 --local（本地仓库） 参数，或者不加参数。
+    ```
+    $ git config user.name "yourname"
+    $ git config user.email "your@email.com"
+    ```
 
-  /* 查看最终三个配置文件计算后的配置信息 */
-  $ git config --list
+  - 查看最终三个配置文件计算后的配置信息
+    ```
+    $ git config --list
+    ```
 
-  /* 打开修改本项目的全局配置信息 */
-  $ git config --global -e
-  ```
+  - 打开修改本项目的全局配置信息
+    ```
+    $ git config --global -e
+    ```
 
 
 
@@ -91,9 +97,8 @@
 
 
   - 配置多个 SSH Key
-  同一台机器经常需要适配多个 git host,比如gitHub、公司gitlab、oschina 等。此时就需要在 config 文件中配置多个SSH Key，使得不同的 host 能使用不同的SSH Key。
+  同一台机器经常需要适配多个 git host,比如gitHub、公司gitlab、oschina 等。此时就需要在 config 文件中配置多个SSH Key，使得不同的 host 能使用不同的SSH Key。配置文件 config:
     ```
-    config 文件:
     # 配置文件参数
     # Host : 要登陆的主机地址
     # HostName : 要登陆的主机名
@@ -150,7 +155,7 @@ ssh -T git@github.com
 
 /* 如果出现 connect to host github.com port 22: Connection timed out 的错误 */
 在秘钥存放的 .ssh 文件下新建一个名为 config 的文件，内容参考上面 config 中的 github 部分。
-
+```
 
 
 
