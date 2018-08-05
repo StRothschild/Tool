@@ -7,6 +7,7 @@
 
 
 
+
 ---
 ### 2. 配置项目的 user.name 用户名和 user.email 邮箱
   - 需要注意的是 user.name 和 user.email 的必须要和 github 账户的 username(类似于别名，而不是 name) 和邮箱地址完全相同，才能被统计进贡献次数。
@@ -31,6 +32,8 @@
 
 
 
+
+
 ---
 ### 3. HTTPS & SSH
   - Git 中链接远程库的方式有两种：HTTPS 和 SSH。
@@ -46,65 +49,74 @@
 
 ---
 ### 4. 配置 SSH
-```
-/* 检测本地是否有 public SSH key 存在 */
-ls -al ~/.ssh t
+  - 检测本地是否有 public SSH key 存在
+    ```
+    ls -al ~/.ssh t
+    ```
 
-/* 通过 ssh-keygen 生成 rsa key pair, 其中参数 [-t rsa] 代表加密类型，[-b bit]代表秘钥长度，[-C comment]代表注释帮助你记忆这对秘钥的用途 */
-ssh-keygen -t rsa -b 4096 -C "comment"
+  - 通过 ssh-keygen 生成 rsa key pair, 其中参数 [-t rsa] 代表加密类型，[-b bit] 代表秘钥长度, [-C comment] 代表注释。
+    ```
+    ssh-keygen -t rsa -b 4096 -C "comment"
+    ```
 
-Windows 下密钥的默认存储地址 "C:\Users\{userName}\.ssh"
-默认私钥文件为: id_rsa
-默认公钥文件为: id_rsa.pub
+  - Windows 下密钥的默认存储地址: "C:\Users\{userName}\\.ssh"
+    ```
+    默认私钥文件为: id_rsa
+    默认公钥文件为: id_rsa.pub
+    ```
 
-/* 生成 SSH key pair 后会要求设置密码，这个密码也可以置空，如果置空，可以用回车直接登录。
-如果设置了密码，则每次使用 SSH 密钥来连接远程仓库时都需要输入该密码 */
-
-/* 生成 SSH key pair 后，将公钥 public key 拷入 gitHub 的 accunt 中 */
-
-/* 以上步骤已经可以使用 SSH 的方式来连接远程库了，如果不、想每次连接都输入一遍密码
-则应该配置 ssh-agent 来管理本地的私钥。有3个步骤如下： */
-/* 1. start the ssh-agent */
-eval $(ssh-agent -s)
-
-/* 2. Add your SSH private key to the ssh-agent. 私钥地址名称都是默认的，可按需更改 */
-ssh-add ~/.ssh/id_rsa
-
-/* 3. 配置 ssh-agent 每次会自动运行，只需要在开启时输入一次密码即可 */
-https://help.github.com/articles/working-with-ssh-key-passphrases/
-
-/* 4. 配置多个 SSH Key */
-同一台机器经常需要适配多个 git host,比如gitHub、公司gitlab、oschina 等。此时就需要在 config 文件中配置多个SSH Key，使得不同的 host 能使用不同的SSH Key。
-config 文件:
-# 配置文件参数
-# Host : 要登陆的主机地址
-# HostName : 要登陆的主机名
-# Port : 要登陆的主机端口
-# User : username/邮箱
-# IdentityFile : 对应主机的私钥文件路径
+  - 生成 SSH key pair 后会要求设置密码，这个密码也可以置空，如果置空，可以用回车直接登录。如果设置了密码，则每次使用 SSH 密钥来连接远程仓库时都需要输入该密码。执行完毕后会提示秘钥存放地址和其他信息。
 
 
-# gitlab
-Host gitlab.com
-HostName gitlab.com
-User hzjiangsheng1@corp.netease.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa
-
-
-# github
-Host github.com
-Hostname ssh.github.com
-Port 443
-User StRothschild
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_rsa
+  - 以上方式产生的 rsa 秘钥不适用于 tortoise，如果要兼容 tortoise，可以使用 PuTTYgen 来生成密钥对，并用 pageant 来管理本地私钥
+  http://blog.csdn.net/qq_15974389/article/details/50937862
 
 
 
-/* 以上方式产生的 rsa 秘钥不适用于 tortoise，如果要兼容 tortoise，可以使用 PuTTYgen 来生成密钥对，并用 pageant 来管理本地私钥 */
-http://blog.csdn.net/qq_15974389/article/details/50937862
-```
+  - 生成 SSH key pair 后，将公钥 public key 的内容拷入 gitHub 的 SSH 配置中。
+
+
+  - 以上步骤已经可以使用 SSH 的方式来连接远程库了，如果不想每次连接都输入一遍密码，可以通过配置 ssh-agent 来管理本地的私钥。有3个步骤如下：
+    ```
+    /* 1. start the ssh-agent */
+    eval $(ssh-agent -s)
+
+    /* 2. Add your SSH private key to the ssh-agent. 私钥地址名称都是默认的，可按需更改 */
+    ssh-add ~/.ssh/id_rsa
+
+    /* 3. 配置 ssh-agent 每次会自动运行，只需要在开启时输入一次密码即可 */
+    https://help.github.com/articles/working-with-ssh-key-passphrases/
+    ```
+
+
+
+
+  - 配置多个 SSH Key
+  同一台机器经常需要适配多个 git host,比如gitHub、公司gitlab、oschina 等。此时就需要在 config 文件中配置多个SSH Key，使得不同的 host 能使用不同的SSH Key。
+    ```
+    config 文件:
+    # 配置文件参数
+    # Host : 要登陆的主机地址
+    # HostName : 要登陆的主机名
+    # Port : 要登陆的主机端口
+    # User : username/邮箱
+    # IdentityFile : 对应主机的私钥文件路径
+
+    # gitlab
+    Host gitlab.com
+    HostName gitlab.com
+    User hzjiangsheng1@corp.netease.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+
+    # github
+    Host github.com
+    Hostname ssh.github.com
+    Port 443
+    User StRothschild
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+    ```
 
 
 
