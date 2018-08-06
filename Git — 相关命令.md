@@ -118,7 +118,7 @@
     HostName gitlab.com
     User XXX@XXX.com
     PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/id_rsa_gitlab
 
     # github
     Host github.com
@@ -126,7 +126,7 @@
     Port 443
     User StRothschild
     PreferredAuthentications publickey
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/id_rsa_github
     ```
 
 
