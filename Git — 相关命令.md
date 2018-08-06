@@ -116,7 +116,7 @@
     # gitlab
     Host gitlab.com
     HostName gitlab.com
-    User hzjiangsheng1@corp.netease.com
+    User XXX@XXX.com
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/id_rsa
 
