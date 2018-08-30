@@ -17,16 +17,19 @@
 
   - 所以在适配多个 Git 系统时，需要注意全局的 user.name 和 user.email 的比项目的 config 配置优先级要低。搞清楚具体设置的生效值，以避免提交没有被统计的情况出现。
 
+  - 新 clone 到本地的项目不要忘记检查 user.name 和 user.email 的配置。如果远程 Git 仓库不适用全局配置，则需要为本项目单独配置信息。不然提交不会被记录 contribute。
+
   - 如果使用 --system（系统） 或 --global（全局） 参数配置，则在本机上提交 git 时都会以这个 user.name 和 email 作为提交者的身份信息。
     ```
     $ git config --global user.name "yourname"
     $ git config --global user.email "your@email.com"
     ```
 
-  - 如果只希望为本项目添加用户信息，则使用 --local（本地仓库） 参数，或者不加参数。
+  - 如果只希望为本项目添加用户信息，则使用 --local（本地仓库） 参数，或者不加参数，默认就是当前仓库配置。
     ```
     $ git config user.name "yourname"
     $ git config user.email "your@email.com"
+    $ git config --unset XXXX(例如:user.name)
     ```
 
   - 查看最终三个配置文件计算后的配置信息
