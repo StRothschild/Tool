@@ -448,6 +448,7 @@ $ git merge <分支名>
 ```
 #### 例如： $ git merge origin/test  把本地的origin/test分支合进了==当前分支==。
 #### ==如果合并出现冲突，则修改冲突文件后，再次 commit 即可完成合并。==
+#### 本地分支 merge 后，执行 push 来同步远程分支。
 
 
 
