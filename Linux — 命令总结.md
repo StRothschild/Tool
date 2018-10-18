@@ -54,12 +54,29 @@
 
 
 
+
 ---
 - #### 查看文件内容
   ##### cat filePath
   ```
     cat /etc/issue     // 查看服务器系统的发行版本
   ```
+
+
+
+
+
+
+---
+- #### 更改文件权限
+  ##### chmod
+  ```
+    -rwxr-rwx-rwx  其中 r=4, w=2, x=1
+    chmod 777 fileName    // -rwxrwxrwx 赋予所有人，操作文件的所有权限 
+    chmod 600 fileName    // -rw------- 文件拥有者可读写不可执行，其他人不可读写执行
+  ```
+
+
 
 
 
