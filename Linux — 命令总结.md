@@ -20,7 +20,6 @@
   sudo -i newUerName   // 切换到 newUserName 账户，用 exit 或 logout 退出  
   sudo                 // 暂时切换到超级用户，默认时间为15分钟   
   su newUserName       // 切换到 newUserName 账户  
-  
   ```
 
 
@@ -38,9 +37,8 @@
 - #### 清屏
   ##### Linux 下使用 clear (本质是翻页，向上翻依然存在记录)
   ##### Windows 下使用 cls
-  ```
-  [root@linux ~]# clear
-  ```
+
+
 
 
 ---
@@ -70,7 +68,7 @@
 - #### 查看文件内容
   ##### cat filePath
   ```
-    cat /etc/issue     // 查看服务器系统的发行版本
+  cat /etc/issue     // 查看服务器系统的发行版本
   ```
 
 
@@ -82,9 +80,9 @@
 - #### 更改文件权限
   ##### chmod
   ```
-    -rwxr-rwx-rwx  其中 r=4, w=2, x=1
-    chmod 777 fileName    // -rwxrwxrwx 赋予所有人，操作文件的所有权限 
-    chmod 600 fileName    // -rw------- 文件拥有者可读写不可执行，其他人不可读写执行
+  -rwxr-rwx-rwx  其中 r=4, w=2, x=1
+  chmod 777 fileName    // -rwxrwxrwx 赋予所有人，操作文件的所有权限 
+  chmod 600 fileName    // -rw------- 文件拥有者可读写不可执行，其他人不可读写执行
   ```
 
 
@@ -149,7 +147,7 @@
 ---
 - #### vim 搜索
   ```
-    ?keyWord       // 从下往上搜索
+    ?keyWord        // 从下往上搜索
     /keyWord        // 从上往下搜索
 
     n               // 下一个搜索到的关键字（方向根据上面提到的 ？和 / 来确定）
