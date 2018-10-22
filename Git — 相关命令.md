@@ -550,6 +550,7 @@ stash@{0}: On master: 可以添加备注
 $ git stash pop [存储列表序号]
 
 例如：
+git stash pop
 git stash pop stash@{0}
 ```
 
