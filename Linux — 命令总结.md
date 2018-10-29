@@ -1,5 +1,5 @@
 ## Linux 基本概念和操作
-> Linux 是源于 UNIX 的一种 UNIX-LIKE 系统
+> Linux 是源于 UNIX 的一种 UNIX-LIKE 系
 
 
 ---
