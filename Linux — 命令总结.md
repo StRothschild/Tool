@@ -113,7 +113,7 @@
 ---
 - #### vim 浏览文件翻页
   ```
-    ctrl + b     // back    往上一页
+    ctrl + b     // back     往上一页
     ctrl + f     // foward  往下一页
 
     ctrl + u     // up      往上半页
