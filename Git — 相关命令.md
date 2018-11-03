@@ -395,7 +395,7 @@ $ git branch <新分支名>
 
 #### 3. 建立本地分支与远程分支的====追踪关系====
 ```
-git branch --set-upstream-to=<远程仓库名>/<远程分支名>
+$ git branch --set-upstream-to=<远程仓库名>/<远程分支名>
 ```
 
 
@@ -498,6 +498,7 @@ $ git push <远程仓库名> <本地分支名>:<远程分支名>
 #### ==--set-upstream 可以指定远程分支为本地分支的 upstream 分支（关联分支）。==
 ```
 $ git push --set-upstream <远程仓库名> <本地分支名>
+$ git push --set-upstream origin master -f
 ```
 #### 如上，设置了 upstream 分支后，下次提交就只需要 git push。
 
