@@ -390,6 +390,9 @@ $ git branch -r   查看远程分支
 #### 2. 创建新分支，但是==不切换到新分支==
 ```
 $ git branch <新分支名>
+
+* 注意 git 默认不区分大小写（可以通过配置文件发现 core.ignorecase=true）
+所以 <分支名> 也是不会区分大小写的 $git branch Dev = $git branch dev
 ```
 
 
