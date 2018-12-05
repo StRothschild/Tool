@@ -360,7 +360,7 @@ $ git reset HEAD 'test.md'
 /* 查看版本库,获取 commitId（版本号） */
 $ git log
 
-/* 通过 commitId，强制选择版本库中的版本 */
+/* 通过 commitId，强制选择版本库中的版本，并且强制删除代码更改 */
 $ git reset --hard commitId
 
 /* 返回之前版本 */
@@ -370,7 +370,7 @@ $ git reset HEAD~3
 
 /* reset 的三种参数 */
 --hard 版本库、暂存区（storage）和工作区全部被指定的提交版本所替换
---mixed 或者不使用参数，版本库和暂存区（storage）会被替换，而工作区不会被替换，老版本和新版本之间的差异会被当成 local change 保存在工作区中
+--mixed (默认值)版本库和暂存区（storage）会被替换，而工作区不会被替换，老版本和新版本之间的差异会被当成 local change 保存在工作区中
 --soft 版本库被替换，而暂存区（storage）和工作区不会被替换，老版本和新版本之间的差异会被保存在暂存区（storage）中
 ```
 
