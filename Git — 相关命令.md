@@ -363,7 +363,7 @@ $ git log
 /* 通过 commitId，强制选择版本库中的版本，并且强制删除代码更改 */
 $ git reset --hard commitId
 
-/* 返回之前版本 */
+/* 返回到之前版本 */
 $ git reset HEAD^     // 回退版本,一个^表示一个版本
 $ git reset HEAD~1    // HEAD~n,表示回退到之前n个版本
 $ git reset HEAD~3
