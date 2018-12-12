@@ -360,7 +360,7 @@ $ git reset HEAD 'test.md'
 /* 查看版本库,获取 commitId（版本号） */
 $ git log
 
-/* 通过 commitId，强制选择版本库中的版本，并且强制删除代码更改 */
+/* 通过 commitId，强制选择版本库中的版本，并且强制删除代码的改动 */
 $ git reset --hard commitId
 
 /* 返回到之前版本 */
