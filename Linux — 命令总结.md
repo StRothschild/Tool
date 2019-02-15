@@ -213,8 +213,17 @@
 ---
 - #### 查看进程
   ```
-    ps -ef | grep tomcat    // 查看 tomcat 进程
+    ps -ef | grep tomcat    // ps 表示 process. 此命令用于查看 tomcat 进程
   ```
+  
+  
+
+---
+- #### 结束进程
+  ```
+    kill -9 PID 
+  ```
+  
   
   
 
