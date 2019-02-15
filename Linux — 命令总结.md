@@ -213,7 +213,16 @@
 ---
 - #### 查看进程
   ```
-    ps -ef | grep tomcat    // ps 表示 process. 此命令用于查看 tomcat 进程
+    ps -ef | grep tomcat    // ps 表示 process 命令. e参数表示显示所有进程，f参数表示全格式展示结果
+    
+    // 返回格式如下
+    UID     //用户ID、但输出的是用户名 
+    PID     //进程的ID 
+    PPID    //父进程ID 
+    C       //进程占用CPU的百分比 
+    STIME   //进程启动到现在的时间 
+    TTY     //该进程在那个终端上运行，若与终端无关，则显示? 若为pts/0等，则表示由网络连接主机进程。 
+    CMD     //命令的名称和参数
   ```
   
   
