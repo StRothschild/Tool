@@ -18,8 +18,8 @@
 - #### 切换用户
   ```
   sudo -iu newUerName   // 切换到 newUserName 账户，用 exit 或 logout 退出  
-  sudo                 // 暂时切换到超级用户，默认时间为15分钟   
-  su newUserName       // 切换到 newUserName 账户  
+  sudo                  // 暂时切换到超级用户，默认时间为15分钟   
+  su newUserName        // 切换到 newUserName 账户  
   ```
 
 
