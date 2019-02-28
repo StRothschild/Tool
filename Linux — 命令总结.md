@@ -15,6 +15,11 @@
 
 
 ---
+- #### pwd指令用于获取目前所在的工作目录的绝对路径
+
+
+
+---
 - #### 切换用户
   ```
   sudo -iu newUerName   // 切换到 newUserName 账户，用 exit 或 logout 退出  
