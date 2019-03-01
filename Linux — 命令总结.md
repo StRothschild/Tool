@@ -85,8 +85,8 @@
 - #### 更改文件权限
   ##### chmod
   ```
-  -rwxr-rwx-rwx  其中 r=4, w=2, x=1
-  chmod 777 fileName    // -rwxrwxrwx 赋予所有人，操作文件的所有权限 
+  -rwxrwxrwx  其中，r=4, w=2, x=1
+  chmod 777 fileName    // 三个数字分别表示User、Group、及Other的权限 7 表示 4+2+1。此命令赋予所有人，操作文件的所有权限 
   chmod 600 fileName    // -rw------- 文件拥有者可读写不可执行，其他人不可读写执行
   ```
 
