@@ -12,9 +12,3 @@
 - #### Delete
   ##### 1. Fn + Delete = 向后删除 
   ##### 2. Command + Delete = 删除选中的文件
-
-
-
-
-- #### SSH
-  ##### ssh -p port userName@hostName

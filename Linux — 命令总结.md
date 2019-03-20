@@ -7,6 +7,16 @@
   ##### Windows 系统的文件系统是FAT32/NTFS，而 Linux 系统的是 EXT4。两者不兼容，不能互相识别对方类型的数据。
 
 
+
+---
+- #### SSH
+  ##### ssh -p port userName@hostName
+  ```
+  ssh -p 1046 hzjiangsheng1@newsrec133.dg.163.org
+  ```
+
+
+
 ---
 - #### 用户权限
   ##### sudo (Superuser Do)
@@ -73,7 +83,11 @@
 - #### 查看文件内容
   ##### cat filePath
   ```
-  cat /etc/issue     // 查看服务器系统的发行版本
+  // 查看服务器系统的发行版本
+  cat /etc/issue     
+
+  // 查看当前路径下的 fileName 文件，并且文件内还有 ’KeyWord‘ 的内容
+  cat ./fileName | grep 'KeyWord'
   ```
 
 
