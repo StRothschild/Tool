@@ -8,7 +8,14 @@
 
 
 
-
+---
 - #### Delete
   ##### 1. Fn + Delete = 向后删除 
   ##### 2. Command + Delete = 删除选中的文件
+
+
+
+---
+- #### 快捷键汇总
+  ##### 1.  Control + Option + Space = 切换输入法
+
