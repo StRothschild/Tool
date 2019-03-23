@@ -13,31 +13,32 @@
 ---
 ### 2. 配置项目的 user.name 用户名和 user.email 邮箱
 
-  - 需要注意的是 user.name 和 user.email 的必须要和 github 账户的 username(类似于别名，而不是 name) 和邮箱地址完全相同，才能被统计进贡献次数。
+  - ##### 需要注意的是 user.name 和 user.email 的必须要和 github 账户的 username(类似于别名，而不是 name) 和邮箱地址完全相同，才能被统计进贡献次数。
 
-  - 所以在适配多个 Git 系统时，需要注意全局的 user.name 和 user.email 的比项目的 config 配置优先级要低。搞清楚具体设置的生效值，以避免提交没有被统计的情况出现。
+  - ##### 注意全局（system）的 user.name 和 user.email 的比当前用户（global）的 config 配置优先级要低，而当前用户（global）的配置又比当前项目（local）的 config 配置优先级要低。搞清楚具体设置的生效值，以避免提交没有被统计的情况出现。
 
-  - 新 clone 到本地的项目不要忘记检查 user.name 和 user.email 的配置。如果远程 Git 仓库不适用全局配置，则需要为本项目单独配置信息。不然提交不会被记录 contribute。
+  - ##### 三个配置文件的适用范围及优先级
+    || system | global | local
+    |---|---|---|---|
+    作用域 | 系统 | 当前登录用户 | 本项目
+    优先级 | 低 | 中 | 高
 
-  - 如果使用 --system（系统） 或 --global（全局） 参数配置，则在本机上提交 git 时都会以这个 user.name 和 email 作为提交者的身份信息。
-    ```
-    $ git config --global user.name "yourname"
-    $ git config --global user.email "your@email.com"
-    ```
 
-  - 如果只希望为本项目添加用户信息，则使用 --local 参数，或者不加参数，默认就是当前仓库配置。
-    ```
-    $ git config user.name "yourname" (当前仓库)
-    $ git config --global user.email "your@email.com" (全局仓库)
-    $ git config --local --unset user.name （删除本地仓库的 user.name 配置）
-    ```
-
-  - 查看最终三个配置文件计算后的配置信息
+  - ##### 查看三个配置文件计算后的最终生效的配置信息
     ```
     $ git config --list
     ```
 
-  - 打开修改本项目的配置信息
+
+  - ##### 如果只希望为本项目添加用户信息，则使用 --local 参数，或者不加参数，默认就是当前仓库配置。
+    ```
+    $ git config user.name "yourname" (当前仓库)
+    $ git config --system user.email "your@email.com" (全局仓库)
+    $ git config --local --unset user.name （删除本地仓库的 user.name 配置）
+    ```
+
+
+  - ##### 打开修改项目的配置信息
     ```
     // 修改全局配置
     $ git config --global -e
