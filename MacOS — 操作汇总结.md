@@ -9,13 +9,15 @@
 
 
 ---
-- #### Delete
-  ##### 1. Fn + Delete = 向后删除 
-  ##### 2. Command + Delete = 删除选中的文件
-
-
-
----
 - #### 快捷键汇总
-  ##### 1.  Control + Option + Space = 切换输入法
+  ```
+  1. Fn + Delete      = 向后删除 
+  2. Command + Delete = 删除选中的文件
+  3. Command + N      = 新打开窗口
+  4. Command + T      = 新打开Tab
+  5. Command + Q      = 退出当前应用
+
+  3. Control + Option + Space = 切换输入法
+  4. Command + Option + <-    = 返回上个位置
+
 
