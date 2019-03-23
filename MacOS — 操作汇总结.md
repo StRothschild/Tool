@@ -18,6 +18,11 @@
   5. Command + Q      = 退出当前应用
 
   3. Control + Option + Space = 切换输入法
+  4. Control + Option + c     = ^C
   4. Command + Option + <-    = 返回上个位置
+  4. Command + Shift + .      = 显示隐藏文件
+
+
+
 
 

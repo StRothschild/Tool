@@ -25,11 +25,11 @@
     $ git config --global user.email "your@email.com"
     ```
 
-  - 如果只希望为本项目添加用户信息，则使用 --local（本地仓库） 参数，或者不加参数，默认就是当前仓库配置。
+  - 如果只希望为本项目添加用户信息，则使用 --local 参数，或者不加参数，默认就是当前仓库配置。
     ```
-    $ git config user.name "yourname"
-    $ git config user.email "your@email.com"
-    $ git config --unset XXXX(例如:user.name)
+    $ git config user.name "yourname" (当前仓库)
+    $ git config --global user.email "your@email.com" (全局仓库)
+    $ git config --local --unset user.name （删除本地仓库的 user.name 配置）
     ```
 
   - 查看最终三个配置文件计算后的配置信息
@@ -37,9 +37,12 @@
     $ git config --list
     ```
 
-  - 打开修改本项目的全局配置信息
+  - 打开修改本项目的配置信息
     ```
+    // 修改全局配置
     $ git config --global -e
+    // 修改本项目配置
+    $ git config --local -e
     ```
 
 
