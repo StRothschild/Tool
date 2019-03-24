@@ -23,6 +23,8 @@
   4. Command + Shift + .      = 显示隐藏文件
 
 
+  5. Fn + Option + F8         = IDEA 计算表达式
+
 
 
 
