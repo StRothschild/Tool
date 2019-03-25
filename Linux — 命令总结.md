@@ -86,8 +86,11 @@
   // 查看服务器系统的发行版本
   cat /etc/issue     
 
-  // 查看当前路径下的 fileName 文件，并且文件内还有 ’KeyWord‘ 的内容
-  cat ./fileName | grep 'KeyWord'
+  // 查看当前路径下的 fileName 文件，并且文件内含有 ’KeyWord‘ 的内容
+  cat filePath/fileName | grep 'KeyWord'
+
+  // 查询结果 ’KeyWord‘ 高亮显示
+  cat filePath/fileName | grep 'KeyWord' --color=auto
   ```
 
 
@@ -110,8 +113,12 @@
 
 ---
 - #### 实时查看文件打印
-  ##### tail -f filePath
+  ```
+  tail -f fileName
 
+  // 实时打印文件中含有 ‘keyWord’ 的内容
+  tailf fileName | grep 'KeyWord'
+  ```
 
 
 

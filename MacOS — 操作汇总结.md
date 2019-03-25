@@ -22,7 +22,7 @@
   4. Command + Shift + .      = 显示隐藏文件
   4. Command + Shift + 3      = 全屏截图
   4. Command + Shift + 4      = 部分截图
-
+  4. Command + Shift + F      = IDEA 全局搜索
 
   3. Control + Tab = chrome 下一个 Tab
   3. Control + Option + Space = 切换输入法
