@@ -17,6 +17,9 @@
   1. Delete + Fn              = 向后删除
 
   5. Option + Fn + F8         = IDEA 计算表达式
+  6. Fn + F7                  = 执行进入代码调用
+  6. Fn + F8                  = 执行下一句代码
+
 
   2. Command + Delete         = 删除选中的文件
   3. Command + N              = 新打开窗口
