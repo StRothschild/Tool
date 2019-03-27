@@ -571,8 +571,28 @@ $ git stash apply [存储列表序号]
 
 
 
+
 ---
-### 18. Git 代码统计
+### 18. 将提交到误分支的修改，切换到正确的分支
+```
+// 1. 取消最近一次提交, 并将改动放回暂存区
+$ git reset HEAD~1
+
+// 2. 把暂存区的改动，放到暂存栈
+$ git stash 
+
+// 3. 切换到目标分支
+$ git checkout targetBranch
+
+// 4. 将暂存区内的改动放到新分支
+$ git stash pop
+```
+
+
+
+
+---
+### 19. Git 代码统计
 ```
 /* 统计当前用户的代码提交量，包括增加，删除 */
 git log --author="$(git config --get user.name)" --pretty=tformat: --numstat | gawk '{ add += $1 ; subs += $2 ; loc += $1 - $2 } END { printf "added lines: %s removed lines : %s total lines: %s\n",add,subs,loc }' -
