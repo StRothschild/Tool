@@ -26,7 +26,8 @@
   4. Command + T              = 新打开Tab
   5. Command + Q              = 退出当前应用
   4. Command + Option + <-    = 返回上个位置
-  4. Command + Option + O     = 整理 important
+  4. Command + Option + O     = IDEA 整理 important
+  4. Command + Option + L     = IDEA 代码格式化
   4. Command + Shift + .      = 显示隐藏文件
   4. Command + Shift + 3      = 全屏截图
   4. Command + Shift + 4      = 部分截图
@@ -37,8 +38,8 @@
   4. Control + Option + c     = ^C
 
 
-  4. Shift + Shift            = IDEA 中查找全部
-
+  4. Shift + Shift            = IDEA 查找全部
+  4. Option + Carriage Back   = IDEA 多个相同类名情况下的解析
 
 
 
