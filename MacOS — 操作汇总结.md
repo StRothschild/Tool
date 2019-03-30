@@ -14,17 +14,17 @@
   1. Tab                      = IDEA 缩进
   2. Tab + Shift              = IDEA 反向缩进
   3. Delete                   = 删除
-  1. Delete + Fn              = 向后删除
+  4. Delete + Fn              = 向后删除
 
   5. Option + Fn + F8         = IDEA 计算表达式
   6. Fn + F7                  = 执行进入代码调用
-  6. Fn + F8                  = 执行下一句代码
+  7. Fn + F8                  = 执行下一句代码
 
 
-  2. Command + Delete         = 删除选中的文件
-  3. Command + N              = 新打开窗口
-  4. Command + T              = 新打开Tab
-  5. Command + Q              = 退出当前应用
+  8.  Command + Delete         = 删除选中的文件
+  9.  Command + N              = 新打开窗口
+  10. Command + T              = 新打开Tab
+  11. Command + Q              = 退出当前应用
   4. Command + Option + <-    = 返回上个位置
   4. Command + Option + O     = IDEA 整理 important
   4. Command + Option + L     = IDEA 代码格式化
