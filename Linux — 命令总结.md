@@ -17,15 +17,18 @@
 
 
 
----
-- #### 用户权限
-  ##### sudo (Superuser Do)
-  ##### su (Switch User)
-
-
 
 ---
 - #### pwd指令用于获取目前所在的工作目录的绝对路径
+
+
+
+
+---
+- #### 用户权限
+  ##### sudo (Superuser Do) 需要当前账号的密码
+  ##### su (Switch User)    需要目标账号的密码
+
 
 
 
@@ -34,7 +37,8 @@
   ```
   sudo -iu newUerName   // 切换到 newUserName 账户，用 exit 或 logout 退出  
   sudo                  // 暂时切换到超级用户，默认时间为15分钟   
-  su newUserName        // 切换到 newUserName 账户  
+  su newUserName        // 切换到 newUserName 账户
+  su -                  // 切换到 root 账号 
   ```
 
 
