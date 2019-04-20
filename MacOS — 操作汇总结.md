@@ -20,14 +20,13 @@
   6. Fn + F7                  = 执行进入代码调用
   7. Fn + F8                  = 执行下一句代码
 
-
   8.  Command + Delete         = 删除选中的文件
   9.  Command + N              = 新打开窗口
   10. Command + T              = 新打开Tab
   11. Command + Q              = 退出当前应用
-  4. Command + Option + <-    = 返回上个位置
-  4. Command + Option + O     = IDEA 整理 important
-  4. Command + Option + L     = IDEA 代码格式化
+  12. Command + Option + <-    = 返回上个位置
+  13. Command + Option + O     = IDEA 整理 important
+  14. Command + Option + L     = IDEA 代码格式化
   4. Command + Shift + .      = 显示隐藏文件
   4. Command + Shift + 3      = 全屏截图
   4. Command + Shift + 4      = 部分截图
@@ -43,5 +42,7 @@
 
 
 
+---
+- #### IDEA 设置
 
 
