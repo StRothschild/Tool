@@ -44,5 +44,9 @@
 
 ---
 - #### IDEA 设置
-
+  ##### 1. 设置 version control   
+  ```
+  1. View ——> Tool Windows ——> Version Control
+  2. Command + 9
+  ```
 
