@@ -27,8 +27,8 @@
   12. Command + Option + <-    = 返回上个位置
   13. Command + Option + O     = IDEA 整理 important
   14. Command + Option + L     = IDEA 代码格式化
-  4. Command + Shift + .      = 显示隐藏文件
-  4. Command + Shift + 3      = 全屏截图
+  15. Command + Shift + .      = 显示隐藏文件
+  16. Command + Shift + 3      = 全屏截图
   4. Command + Shift + 4      = 部分截图
   4. Command + Shift + F      = IDEA 全局搜索关键字
 
