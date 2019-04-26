@@ -434,8 +434,9 @@ $ git push origin :<远程分支名>            通过推送一个空分支（�
 $ git fetch <远程仓库名> <分支名>
 
 例如：$ git fetch origin master
-注意，从远程仓库 fetch 一个本地不存在的分支时，使用 git branch -a 不能立即展示新下载的分支。
-需要 git checkout 到新分支后，git branch 才会出现新分支。
+注意，从远程仓库 fetch 一个本地不存在的分支时，使用 git branch -a 不能立即展示新下载的分支。需要 git checkout 到新分支后，git branch 才会出现新分支。
+
+fetch 到本地的新分支会自动和远程分支关联。
 ```
 
 
