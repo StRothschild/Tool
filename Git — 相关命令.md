@@ -594,7 +594,11 @@ $ git stash pop
 ---
 ### 19. Merge 时出错
 ```
-
+Your local changes to the following files would be overwritten by merge
+// 本地修改完全回撤
+git reset --hard
+// 再次合并代码
+git merge master
 ```
 
 
