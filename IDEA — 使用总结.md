@@ -8,6 +8,13 @@
 
 
 
+---
+- #### 打开 Version Control
+  View —> Tool Windows —> Version Control
+
+
+
+
 
 ---
 - #### 快捷键
