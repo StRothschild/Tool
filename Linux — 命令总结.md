@@ -102,6 +102,21 @@
 
 
 
+
+
+---
+- #### 统计出现次数
+  ```
+  // -c 表示 Count, 统计 KeyWord 的出现次数
+  grep -c 'keyWord' filePath/fileName
+  // 联合使用 wc 命令，-l 代表 line, 统计行数
+   grep 'KeyWord' filePath/fileName | wc -l 
+  ```
+
+  
+
+
+
 --- 
 - #### 文本查找
   ```
