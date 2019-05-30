@@ -110,7 +110,7 @@
   // -c 表示 Count, 统计 KeyWord 的出现次数
   grep -c 'keyWord' filePath/fileName
   // 联合使用 wc 命令，-l 代表 line, 统计行数
-   grep 'KeyWord' filePath/fileName | wc -l 
+  grep 'KeyWord' filePath/fileName | wc -l 
   ```
 
   
@@ -180,6 +180,9 @@
   ```
   ll 不是一个 linux 的命令，它是 ls -l 的一个别名
   返回的结果是按文件的修改时间降序排序的结果
+  
+  // 用人类可读的单位显示当前目录下各个文件的信息 
+  ll -h  
   ```
 
 
