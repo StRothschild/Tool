@@ -136,5 +136,13 @@
 
 
 ---
-- #### 打 jar 包
+- #### IDEA 中打 jar 包
    Maven Projects --> Lifecycle --> package
+
+
+
+
+
+--- 
+- #### 
+- ##### MAC下如果使用Command+C的复制方法只能在项目内部进行移动
